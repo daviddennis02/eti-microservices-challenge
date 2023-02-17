@@ -70,13 +70,9 @@ I provided also Jenkins pipelines snippets to provision and destroy the infrastr
 To automate the deployment of the microservices, I used Helm charts stored in Github and deployed via Jenkins pipelines using Helm.
 For more examples, some components of the cluster are already deployed with Helm like the monitoring/logging stacks components.
 
-NB: We can adopt another approach much more automated to deploy microservices to the Kubernetes cluster using Flux or ArgoCD operators directly from Github to the cluster. I can provide more details on this point in the next interview.
-
 
 ## Monitoring approach
 
 As ETI strategy is to use opensource tools, Prometheus & Grafana are the best monitoring tools to meet this goal.
 Used in combination with some AWS services like CloudWatch and SNS, they could handle a lot of monitoring and alerting aspects for the cluster health and its components and deployed applications.
 I provided some snippets to install and configure them in the cluster.
-
-NB: No enough time to go deeper with monitoring and alerting configurations
