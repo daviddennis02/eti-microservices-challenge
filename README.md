@@ -34,7 +34,7 @@ The EKS control plane consists of at least two API server instances and three et
 
 
 In the document "ETI-eks-architecture.pptx", I provided a simplified (and not complete) architecture for the kubernetes cluster to build based on the AWS EKS Service.
-The cluster will be in the AWS region "eu-west-1" (Bahrein) and composed principally like below :
+The cluster will be in the AWS region "eu-west-1" and composed principally like below :
   a - VPC with three public and three private subnets with one public and one private subnet in each availablity zone
   b - Bastion machine in a public subnet (accessible only via SSH) to enable SSH access to the kubernetes worker nodes in private subnets (for high-availibility of the Bastion machine, we can install two Bastion instances in two different public subnets fronted by a NLB)
   c - Kubernetes master provided as a service by AWS
@@ -70,13 +70,9 @@ I provided also Jenkins pipelines snippets to provision and destroy the infrastr
 To automate the deployment of the microservices, I used Helm charts stored in Github and deployed via Jenkins pipelines using Helm.
 For more examples, some components of the cluster are already deployed with Helm like the monitoring/logging stacks components.
 
-NB: We can adopt another approach much more automated to deploy microservices to the Kubernetes cluster using Flux or ArgoCD operators directly from Github to the cluster. I can provide more details on this point in the next interview.
-
 
 ## Monitoring approach
 
 As ETI strategy is to use opensource tools, Prometheus & Grafana are the best monitoring tools to meet this goal.
 Used in combination with some AWS services like CloudWatch and SNS, they could handle a lot of monitoring and alerting aspects for the cluster health and its components and deployed applications.
 I provided some snippets to install and configure them in the cluster.
-
-NB: No enough time to go deeper with monitoring and alerting configurations
