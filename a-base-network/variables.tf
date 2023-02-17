@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "AWS Region"
-  default     = "me-south-1"
+  default     = "eu-west-1"
 }
 
 variable "vpc_name" {
@@ -28,7 +28,7 @@ variable "enable_dns_support" {
 variable "azs" {
   description = "A list of public subnets inside the VPC"
   type        = list(string)
-  default     = ["me-south-1a", "me-south-1b", "me-south-1c"]
+  default     = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
 }
 
 variable "private_subnets" {
