@@ -1,0 +1,12 @@
+pipeline {
+
+    stages {
+        stage('checkout infra repository') {
+            steps {
+                script {
+                    // clone all infra-as-code building blocks to the bastion server to prepare for infra building.
+                }
+            }            
+        }
+    }
+}

@@ -1,0 +1,19 @@
+pipeline {
+
+    stages {   
+        stage('destroy eks infra') {
+            steps {
+                terraform run: terraform destroy in the below order
+                1 - i-observability
+                2 - h-backup-restore
+                3 - g-ingress
+                4 - f-dashboard-metrics
+                5 - e-cluster-autoscaler
+                6 - d-workers
+                7 - c-masters
+                8 - b-security-groups
+                9 - a-base-network
+            }
+        }
+    }
+}

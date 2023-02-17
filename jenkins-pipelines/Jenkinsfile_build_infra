@@ -1,0 +1,25 @@
+pipeline {
+
+    stages {   
+        stage('pipeline prepare build infra') {
+            steps {
+                build job: Jenkinsfile_prepare_build_infra
+            }
+        }
+
+        stage('build eks infra') {
+            steps {
+                terraform run: terraform init and terraform apply in the below order
+                1 - a-base-network
+                2 - b-security-groups
+                3 - c-masters
+                4 - d-workers
+                5 - e-cluster-autoscaler
+                6 - f-dashboard-metrics
+                7 - g-ingress
+                8 - h-backup-restore
+                9 - i-observability
+            }
+        }
+    }
+}
