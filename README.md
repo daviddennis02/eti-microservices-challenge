@@ -34,7 +34,7 @@ The EKS control plane consists of at least two API server instances and three et
 
 
 In the document "ETI-eks-architecture.pptx", I provided a simplified (and not complete) architecture for the kubernetes cluster to build based on the AWS EKS Service.
-The cluster will be in the AWS region "eu-west-1" (Bahrein) and composed principally like below :
+The cluster will be in the AWS region "eu-west-1" and composed principally like below :
   a - VPC with three public and three private subnets with one public and one private subnet in each availablity zone
   b - Bastion machine in a public subnet (accessible only via SSH) to enable SSH access to the kubernetes worker nodes in private subnets (for high-availibility of the Bastion machine, we can install two Bastion instances in two different public subnets fronted by a NLB)
   c - Kubernetes master provided as a service by AWS
