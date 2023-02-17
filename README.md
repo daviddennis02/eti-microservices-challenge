@@ -2,7 +2,7 @@
 
 ETI microservices platform :
  - Must be scalable according to the load 
- - Need to be automatized 
+ - Need to be automated 
  - Need to be globally distributed 
  - Need to have mechanism for resiliency and fault tolerance
 
